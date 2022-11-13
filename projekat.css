@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("images/background.jpg");
+    background-position: center;
+    background-size: 60%;
+}
+
+.header{
+    background-color: black;
+    display: flex;
+}
+.header img{
+    width: 80px;
+}
