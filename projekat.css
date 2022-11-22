@@ -102,15 +102,53 @@ nav a:hover {
     font-size: 16px;
 }
 
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.main td {
+    background: linear-gradient(TO RIGHT, #040404, #000000, #7878788a);
+    padding: 30px;
+}
+
+.main img {
+    border-radius: 50%;
+    box-shadow: 1px 1px gray;
+}
+
+.main .total img {
+    height: 225px;
+    width: 250px;
+}
+
+
+.main p {
+    text-align: left;
+    background-color: #000000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
 @media(max-width:700px) {
     div {
         text-align: center;
         padding-left: 0;
         padding-right: 0;
-        
+
     }
 
-    .top-bar {
+    .top-bar,
+    .logo,
+    .menu {
         display: flex;
         width: 100%;
         flex-direction: row;
@@ -124,22 +162,15 @@ nav a:hover {
         font-size: 0.6rem;
     }
 
-    .logo {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-    }
-    .logo a{
+    .logo a {
         font-size: 0.5rem;
     }
 
-    .menu {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-    }
 
     .menu li a {
         font-size: 0.4rem;
     }
+
+
+
 }
