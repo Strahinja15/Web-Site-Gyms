@@ -102,75 +102,98 @@ nav a:hover {
     font-size: 16px;
 }
 
-.main {
-    margin-left: auto;
-    margin-right: auto;
+.toggle {
+    font-size: 30px;
+    display: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    background: linear-gradient(TO RIGHT,#040404,#656565,#fff);
+    width: 270px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.card:hover{
+    background-color: #222;
+    color: azure;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.4s ease;
+}
+.card a:hover{
+    transform: scaleX(1.10);
+    transition: 0.3s;
+}
+.card-image{
+    height: 170px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+}
+
+.gym-1{
+    background: url('images/gym1.jpg');
+    background-size: cover;
+    background-position-y: -25px; 
+}
+
+.gym-2{
+    background: url('images/gym2.png');
+    background-size: cover; 
+}
+
+.gym-3{
+    background: url('images/gym3.jfif');
+    background-size: cover;  
+}
+
+.card h2{
+    padding: 10px;
     text-align: center;
+    
 }
 
-.main td {
-    background: linear-gradient(TO RIGHT, #040404, #000000, #7878788a);
-    padding: 30px;
+.card p{
+    padding: 10px;
 }
 
-.main img {
-    border-radius: 50%;
-    box-shadow: 1px 1px gray;
-}
-
-.main .total img {
-    height: 225px;
-    width: 250px;
-}
-
-
-.main p {
-    text-align: left;
+.card a{
     background-color: #000000;
-    color: white;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 50px;
 }
 
 
-
-
-
-
-
-
-
-@media(max-width:700px) {
-    div {
-        text-align: center;
-        padding-left: 0;
-        padding-right: 0;
-
+@media screen and (max-width:600px) {
+    nav {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
     }
 
-    .top-bar,
-    .logo,
     .menu {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
+        margin-top: 15px;
+        display: none;
     }
 
-    .top-bar ul li {
-        font-size: 0.6rem;
+    .menu.active,
+    .toggle {
+        display: block;
     }
 
-    .top-bar span {
-        font-size: 0.6rem;
+    .toggle {
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
-
-    .logo a {
-        font-size: 0.5rem;
-    }
-
-
-    .menu li a {
-        font-size: 0.4rem;
-    }
-
-
+    
 
 }
