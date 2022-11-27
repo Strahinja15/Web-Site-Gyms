@@ -218,8 +218,11 @@ nav a:hover {
   .form-popup {
     display: none;
     position: fixed;
-    top: 100px;
-    right: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
     border: 4px solid #222;
     z-index: 9;
   }
