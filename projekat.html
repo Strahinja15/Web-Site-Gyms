@@ -9,7 +9,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
-    <title>Fitness centri Novi Sad</title>
+    <title>www.FitnessNS.com</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
             <li><a href="projekat.html">Home</a></li>
             <li><a href="#">Admin Panel</a></li>
             <li><button class="open-button" onclick="openForm()"><a href="#">Login</a></button></li>
-            <li><a href="#">Register</a></li>
+            <li><button class="open-buttom" onclick="openForm()"><a href="#">Register</a></button></li>
         </ul>
     </nav>
 
@@ -73,7 +73,7 @@
     </section>
 
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
           <h1>Login</h1>
       
           <label for="email"><b>Email</b></label>
@@ -81,7 +81,7 @@
       
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
-          <label><input type="checkbox" checked="checked" name="remember">Remember me</label>
+          <label><input type="checkbox" name="remember">Remember me</label>
           <button type="submit" class="btn">Login</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
@@ -93,8 +93,55 @@
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <!--NAV BAR PRI SMANJENJU EKRANA-->
     <script>
         $(function () {
             $(".toggle").on("click", function () {
@@ -109,7 +156,9 @@
             });
         });
     </script>
-    
+     <!--NAV BAR PRI SMANJENJU EKRANA-->
+
+    <!--ZA FORMU LOGIN-->
     <script>
         function openForm() {
           document.getElementById("myForm").style.display = "block";
@@ -119,7 +168,7 @@
           document.getElementById("myForm").style.display = "none";
         }
         </script>
-        
+        <!--LOGIN FORMA KRAJ-->
     
 </body>
 
