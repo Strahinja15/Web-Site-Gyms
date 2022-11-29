@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    opacity: 0.9;
+    color: #fff;
+}
+
+.main-text,
+p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+
+}
+
+a {
+    background-color: #343434;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #808080;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+
+.main-table tr td span {
+    text-align: center;
+}
+
+.main-table {
+    background-color: #36454F;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+
+}
+
+.main-table tbody .title td {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.main-table tr td {
+    padding-right: 60px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: justify;
+    padding-right: 80px;
+}
+
+.main-table tr td button {
+    padding: 5px;
+    margin-left: 30px;
+    background-color: azure;
+    border-radius: 4px;
+}
+
+.main-table tr td .show {
+    background-color: #808080;
+    cursor: pointer;
+}
+
+.main-table tr td .change {
+    background-color: #808080;
+    cursor: pointer;
+}
+
+.main-table tr td .clear {
+    background-color: #d92626;
+    cursor: pointer;
+}
+
+.main-table tr td .show:hover {
+    background-color: antiquewhite;
+}
+
+.main-table tr td .change:hover {
+    background-color: antiquewhite;
+}
+
+.main-table tr td .clear:hover {
+    background-color: #ff8080;
+}

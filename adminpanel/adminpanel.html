@@ -5,37 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adminpanel.css">
     <title>www.FITNS/AdminPanel.com</title>
 </head>
 
 <body>
-    <form>
-        <legend>Podaci clana</legend><br>
-        <label>Puno ime:
-        <input type="text" value="Branko Brankovic"></label>
-        <label>Pol:
-        <input type="text" value="Muski"></label>
-        <label>Godine:
-        <input type="text" value="34.godine"></label>
-        <label>Adresa:
-        <input type="text" value="Cara Dusana 4"></label>
-        <label>Teretana:
-        <input type="text" value="NoLimitGym"></label>
-        <br>
-        <br>
-        <hr>
-        <br>
-        <label>Puno ime:
-        <input type="text" value="Miki Mikovic"></label>
-        <label>Pol:
-        <input type="text" value="Muski"></label>
-        <label>Godine:
-        <input type="text" value="27.godine"></label>
-        <label>Adresa:
-        <input type="text" value="Bulevar Evrope 25"></label>
-        <label>Teretana:
-        <input type="text" value="MegaGym"></label>
-    </form>
+    <h1>Upravljanje korisnicima</h1>
+    <div class="main-text">
+    <p>Na ovoj stranici se prikazuju racuni korisnika i racuni fitness centara.
+        Za upotrebu naprednih podesavanja nad racunima detaljno procitati upustvo koje se nalazi na stranici
+        kako bi sebi olaksali posao.Nikakav rad nad racunima nije preporucen pre citanja navedenog uputsva.
+        Hvala Vam.
+    </p>
+</div>
+    <h2>Korisnicki Panel:</h2>
+    <table class="main-table" border="2">
+        <tbody>
+            <tr class="title">
+                <td>Korisnik</td>
+                <td>E-mail</td>
+                <td>Radnja</td>
+            </tr>
+            <tr>
+                <td>Limeni233</td>
+                <td>limeniludi34@gmail.com</td>
+                <td><button class="show">Prikaz detalja</button><button class="change">Izmena podataka</button><button
+                        class="clear">Brisanje</button></td>
+            </tr>
+            <tr>
+                <td>Micoo111</td>
+                <td>miladinstojkovic24@gmail.com</td>
+                <td><button class="show">Prikaz detalja</button><button class="change">Izmena podataka</button><button
+                        class="clear">Brisanje</button></td>
+            </tr>
+            <tr>
+                <td>LeaLuda</td>
+                <td>leontinagromic25@gmail.com</td>
+                <td><button class="show">Prikaz detalja</button><button class="change">Izmena podataka</button><button
+                        class="clear">Brisanje</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Fitness centri panel</h2>
+
+    <table class="main-table" border="2">
+        <tr class="title">
+            <td>ID</td>
+            <td>Naziv</td>
+            <td>Radnja</td>
+        </tr>
+        <tr>
+            <td>#022</td>
+            <td>MegaGym</td>
+            <td><button class="show">Prikaz detalja</button><button class="change">Izmena detalja</button><button
+                    class="clear">Brisanje</button></td>
+        </tr>
+        <tr>
+            <td>#073</td>
+            <td>NoLimitGym</td>
+            <td><button class="show">Prikaz detalja</button><button class="change">Izmena detalja</button><button
+                    class="clear">Brisanje</button></td>
+        </tr>
+        <tr>
+            <td>#048</td>
+            <td>TotalGym</td>
+            <td><button class="show">Prikaz detalja</button><button class="change">Izmena detalja</button><button
+                    class="clear">Brisanje</button></td>
+        </tr>
+    </table>
     <p><a href="../projekat.html">Nazad na pocetnu</a></p>
 </body>
 
