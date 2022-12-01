@@ -6,13 +6,12 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-    background-image: url("images/background.jpg");
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no repeat;
+    background: linear-gradient(TO LEFT,#fff,#656565);
+    
 }
 
 a,
@@ -61,10 +60,6 @@ nav {
     display: flex;
     align-items: center;
     box-shadow: 1px 1px gray;
-
-
-
-
 }
 
 nav a {
@@ -121,6 +116,103 @@ nav a:hover {
     font-size: 30px;
     display: none;
 }
+/*KRAJ CSS SA TOP BAROM I NAVOM*/
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards{
+    width: 300px;
+    margin: 10px;
+    margin-left: 35px;
+    background-color: #656565;
+    border-radius: 15px;
+}
+.card-img img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.attack{
+    height: 169px;
+}
+.card-body h2{
+    text-align: center;
+}
+.card-body p{
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 5px ;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-footer button{
+    width: 150px;
+    background: #000000;
+    color: #fff;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.card-footer button a{
+    color: #fff;
+    text-decoration: none;
+}
+.card-footer button a:hover{
+    color: #000000;
+}
+.card-footer button:hover{
+    transform: scaleY(1.15);
+    transition: 0.3s;
+    background: #fff;
+    color: #000000;
+}
+
+.cards:hover{
+    box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
+    background-color: #222;
+    color: azure;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.4s ease
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
