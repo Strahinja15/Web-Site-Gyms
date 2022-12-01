@@ -10,7 +10,7 @@
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-    background: linear-gradient(TO LEFT,#fff,#656565);
+    background: linear-gradient(TO RIGHT,#656565,#fff);
     
 }
 
@@ -117,8 +117,48 @@ nav a:hover {
     display: none;
 }
 /*KRAJ CSS SA TOP BAROM I NAVOM*/
+h1{
+    display: block;
+    text-align: center;
+    font: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.site-img{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.site-img img{
+    width: 300px;
+}
+.site-img :first-child{
+    height: 235px;
+}
+.site-img :nth-child(3){
+    height: 235px;
+}
 
-
+.title-title{
+    display: block;
+    text-align: center;
+    background-color: #040404;
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.main-text-site{
+    padding: 5px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+.main-text-site h1{
+    text-align: left;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -136,6 +176,9 @@ nav a:hover {
     border-radius: 15px 15px 0 0;
 }
 .attack{
+    height: 169px;
+}
+.balance{
     height: 169px;
 }
 .card-body h2{
@@ -394,5 +437,10 @@ nav a:hover {
     .main-title h1 {
         font-size: 30px;
     }
-
+    h1{
+        font-size: 25px;
+    }
+    .site-img img{
+        width: 230px;
+    }
 }
