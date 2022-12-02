@@ -309,5 +309,7 @@ h3 {
     .main-title h1 {
         font-size: 30px;
     }
-
+    .main-text-site img{
+        width: 230px;
+    }
 }
