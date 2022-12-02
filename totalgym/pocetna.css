@@ -209,14 +209,19 @@ h1{
     cursor: pointer;
     margin-bottom: 10px;
 }
+
 .card-footer button a{
-    color: #fff;
     text-decoration: none;
+    color: #fff;
 }
-.card-footer button a:hover{
+
+.card-footer  button:hover{
+    transform: scaleY(1.15);
+    transition: 0.3s;
+    background: #fff;
     color: #000000;
 }
-.card-footer button:hover{
+.card-footer a:hover{
     transform: scaleY(1.15);
     transition: 0.3s;
     background: #fff;
