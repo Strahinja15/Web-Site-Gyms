@@ -221,12 +221,7 @@ h1{
     background: #fff;
     color: #000000;
 }
-.card-footer a:hover{
-    transform: scaleY(1.15);
-    transition: 0.3s;
-    background: #fff;
-    color: #000000;
-}
+
 
 .cards:hover{
     box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
