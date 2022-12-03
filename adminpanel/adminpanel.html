@@ -47,117 +47,87 @@
     </nav>
 
 
+    <h1>Upravljanje korisnicima</h1>
+    <div class="main-text">
+        <p>Na ovoj stranici se prikazuju racuni korisnika i racuni fitness centara.
+            Za upotrebu naprednih podesavanja nad racunima detaljno procitati upustvo koje se nalazi na stranici
+            kako bi sebi olaksali posao.Nikakav rad nad racunima nije preporucen pre citanja navedenog uputsva.
+            Hvala Vam.
+        </p>
+    </div>
 
-
-
-
-        <h1>Upravljanje korisnicima</h1>
-        <div class="main-text">
-            <p>Na ovoj stranici se prikazuju racuni korisnika i racuni fitness centara.
-                Za upotrebu naprednih podesavanja nad racunima detaljno procitati upustvo koje se nalazi na stranici
-                kako bi sebi olaksali posao.Nikakav rad nad racunima nije preporucen pre citanja navedenog uputsva.
-                Hvala Vam.
-            </p>
-        </div>
-        <h2>Korisnicki Panel:</h2>
-        <table class="main-table" border="2">
+    <div class="table-container">
+        <h1 class="heading">Korisnicki Panel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Korisnik:</th>
+                    <th>E-mail:</th>
+                    <th>Radnja-1:</th>
+                    <th>Radnja-2:</th>
+                    <th>Radnja-3:</th>
+                </tr>
+            </thead>
             <tbody>
-                <tr class="title">
-                    <td>Korisnik</td>
-                    <td>E-mail</td>
-                    <td>Radnja</td>
+                <tr>
+                    <td data-label="Korisnik">Miladin M.</td>
+                    <td data-label="E-mail">limeni22@gmail.com</td>
+                    <td data-label="Radnja-1"><button class="show">prikazi</button></td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button></td>
+                    <td data-label="Radnja-3"><button class="clear">obrisi</button></td>
                 </tr>
                 <tr>
-                    <td>Limeni233</td>
-                    <td>limeniludi34@gmail.com</td>
-                    <td><button class="show">Prikaz detalja</button><button class="change">Izmena
-                            podataka</button><button class="clear">Brisanje</button></td>
+                    <td data-label="Korisnik">Leontina D.</td>
+                    <td data-label="E-mail">lealuda022@gmail.com</td>
+                    <td data-label="Radnja-1"><button class="show">prikazi</button></td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button></td>
+                    <td data-label="Radnja-3"><button class="clear">obrisi</button></td>
                 </tr>
                 <tr>
-                    <td>Micoo111</td>
-                    <td>miladinstojkovic24@gmail.com</td>
-                    <td><button class="show">Prikaz detalja</button><button class="change">Izmena
-                            podataka</button><button class="clear">Brisanje</button></td>
-                </tr>
-                <tr>
-                    <td>LeaLuda</td>
-                    <td>leontinagromic25@gmail.com</td>
-                    <td><button class="show">Prikaz detalja</button><button class="change">Izmena
-                            podataka</button><button class="clear">Brisanje</button></td>
+                    <td data-label="Korisnik">Miki T.</td>
+                    <td data-label="E-mail">mikimilane111@gmail.com</td>
+                    <td data-label="Radnja-1"><button class="show">prikazi</button></td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button></td>
+                    <td data-label="Radnja-3"><button class="clear">obrisi</button></td>
                 </tr>
             </tbody>
         </table>
-
-        <h2>Fitness centri panel:</h2>
-
-        <table class="main-table" border="2">
-            <tr class="title">
-                <td>ID</td>
-                <td>Naziv</td>
-                <td>Radnja</td>
-            </tr>
-            <tr>
-                <td>#022</td>
-                <td>MegaGym</td>
-                <td><button class="show">Prikaz detalja</button><button class="change">Izmena detalja</button><button
-                        class="clear">Brisanje</button></td>
-            </tr>
-            <tr>
-                <td>#073</td>
-                <td>NoLimitGym</td>
-                <td><button class="show">Prikaz detalja</button><button class="change">Izmena detalja</button><button
-                        class="clear">Brisanje</button></td>
-            </tr>
-            <tr>
-                <td>#048</td>
-                <td>TotalGym</td>
-                <td><button class="show">Prikaz detalja</button><button class="change">Izmena detalja</button><button
-                        class="clear">Brisanje</button></td>
-            </tr>
+        <h1 class="heading">Fitness Panel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID:</th>
+                    <th>Teretana:</th>
+                    <th>Radnja-1:</th>
+                    <th>Radnja-2:</th>
+                    <th>Radnja-3:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="ID">#001</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Radnja-1"><button class="show">prikazi</button></td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button></td>
+                    <td data-label="Radnja-3"><button class="clear">obrisi</button></td>
+                </tr>
+                <tr>
+                    <td data-label="ID">#002</td>
+                    <td data-label="Teretana">MegaGym</td>
+                    <td data-label="Radnja-1"><button class="show">prikazi</button></td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button></td>
+                    <td data-label="Radnja-3"><button class="clear">obrisi</button></td>
+                </tr>
+                <tr>
+                    <td data-label="ID">#003</td>
+                    <td data-label="Teretana">TotalGym</td>
+                    <td data-label="Radnja-1"><button class="show">prikazi</button></td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button></td>
+                    <td data-label="Radnja-3"><button class="clear">obrisi</button></td>
+                </tr>
+            </tbody>
         </table>
-    
-
-
-
-
-
-
-
-
-        <div class="login-popup" id="myLogin">
-            <form class="login-container">
-                <h1>Login</h1>
-    
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-    
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                <label><input type="checkbox" name="remember">Remember me</label>
-                <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn cancel" onclick="closeLogin()">Close</button>
-            </form>
-        </div>
-    
-        <div class="register-popup" id="myRegister">
-            <form class="register-container">
-                <h1>Register</h1>
-                <label for="FullName">Your name</label>
-                <input type="text" placeholder="Enter Fullname" name="name" required>
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-    
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-                <label for="psw"></label>
-                <input type="password" placeholder="Confirm Password" name="psw" required>
-                <label>Gender:</label>
-                <input type="radio" id="male" value="male" name="gender"><label for="male">Male</label>
-                <input type="radio" id="female" value="female" name="gender"><label for="female">Female</label>
-                <button type="submit" class="btn">Login</button>
-                <button type="button" class="btn cancel" onclick="closeRegister()">Close</button>
-            </form>
-        </div>
+    </div>
 
 
 
@@ -180,7 +150,61 @@
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="login-popup" id="myLogin">
+        <form class="login-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label><input type="checkbox" name="remember">Remember me</label>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeLogin()">Close</button>
+        </form>
+    </div>
+
+    <div class="register-popup" id="myRegister">
+        <form class="register-container">
+            <h1>Register</h1>
+            <label for="FullName">Your name</label>
+            <input type="text" placeholder="Enter Fullname" name="name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"></label>
+            <input type="password" placeholder="Confirm Password" name="psw" required>
+            <label>Gender:</label>
+            <input type="radio" id="male" value="male" name="gender"><label for="male">Male</label>
+            <input type="radio" id="female" value="female" name="gender"><label for="female">Female</label>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeRegister()">Close</button>
+        </form>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!--NAV BAR PRI SMANJENJU EKRANA-->
     <script>
         $(function () {
