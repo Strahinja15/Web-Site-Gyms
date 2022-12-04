@@ -261,6 +261,20 @@ p {
     margin-top: 10px;
 
 }
+.bottom .error{
+    padding: 15px;
+    width: 100px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.bottom a{
+    text-decoration: none;
+}
+.bottom .error:hover{
+    background-color: #222;
+}
 
 
 
@@ -286,6 +300,7 @@ h2 {
 
 .table {
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .table thead {
