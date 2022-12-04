@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pocetna.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <title>www.NoLimitGym.com</title>
+    <link rel="stylesheet" href="korisnik1.css">
+    <title>Korisnik Forma</title>
 </head>
-
 <body>
     <div class="top-bar">
         <span>
@@ -38,112 +36,62 @@
             </a>
         </div>
         <ul class="menu">
-            <li><a href="../projekat.html">Home</a></li>
-            <li><a href="../adminpanel/adminpanel.html">Admin Panel</a></li>
+            <li class="home"><a href="../projekat.html">Home</a></li>
+            <li class="home"><a href="adminpanel.html">Admin Panel</a></li>
             <li><button class="open-button" onclick="openLogin()"><a href="#">Login</a></button></li>
             <li><button class="open-buttom" onclick="openRegister()"><a href="#">Register</a></button></li>
         </ul>
     </nav>
 
-    <div class="title-title">
-        <h1>NoLimit GYM</h1>
-    </div>
-    <h1>Neke NoLimit slike?</h1>
-    <div class="site-img">
-        <img src="izgled1.jfif" alt="">
-        <img src="izgled2.jfif" alt="">
-        <img src="izgled3.jfif" alt="">
-    </div>
-
-    <div class="site-info">
-        <h2>NoLimit informacije</h2>
-        <p>
-            <b>Godina otvaranja:</b> <br>
-            30. maj 2022. godine
-        </p>
-        <p>
-            <b>Mesecna clanarina:</b><br>
-            2900 dinara
-        </p>
-        <p>
-            <b>Prosecna ocena:</b> 4,3 <br>
-            <b>Broj ocena:</b> 1012
-        </p>
-        <p>
-            <b>NoLimit usluge:</b> <br> Usluge na licu mesta <br>
-            Nema onlajn casova.
-        </p>
-        <p>
-           <b>Adresa:</b> <br> Branka Bajica 11,Novi Sad 21101
-        </p>
-        <p>
-            <b>Radno vreme:</b> <br>
-            Ponedeljak-Petak 6:00-23:00 <br>
-            Vikend:8-22:00
-        </p>
-        <p>
-            <b>Telefon:</b>063 538000
-        </p>
-    </div>
-
-    <div class="main-text-site">
-        <h1>-NoLimit INFO-</h1>
-        Naša vizija je biti najbolji u svim segmentima koje jedan fitnes centar može da ponudi. Ne pristajemo na manje
-        od najboljeg jer nam višegodišnje iskustvo u fitnesu i menadžmentu to ne dozvoljava.
-
-        Želimo da vam omogućimo vrhunske uslove za vežbanje kao i okruženje u kojem ćete se osećeti prijatno i
-        ispunjeno.
-
-        Sigurni smo da će jedan dolazak u No Limit Gym ostaviti najbolji prvi utisak i podići vaša očekivanja na najviši
-        nivo.
-        1500m2 najrazličitijih fitnes sadržaja, najboljih fitnes sprava za vežbanje, najsavremeniji visokokvalitetni
-        sistem klimatizacije, personalne i grupne treninge, kao i programe za decu, tako da cela porodica može da radi
-        na poboljšanju kvaliteta života.
-    </div>
-    <h1>NoLimit najpozeljniji treninzi</h1>
-    <div class="container">
-        <div class="cards">
-            <div class="card-img">
-                <img src="bodypump.jpg" alt="bodypump">
-            </div>
-            <div class="card-body">
-                <h2>No Pump Limit</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatibus laudantium, nisi
-                    praesentium reprehenderit illo excepturi inventore.</p>
-            </div>
-            <div class="card-footer">
-                <a href="trening1.html"><button>Read More</button></a>
-            </div>
+    <div class="wrapper">
+        <div class="title">
+            Korisnik Info
         </div>
-
-        <div class="cards">
-            <div class="card-img">
-                <img class="attack" src="bodyattack.png" alt="bodyattack">
+        <div class="form">
+            <div class="input_field">
+                <label>Korisnicko ime:</label>
+                <input type="text" value="MickoComi021" required class="input">
             </div>
-            <div class="card-body">
-                <h2>No Attack Limit</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatibus laudantium, nisi
-                    praesentium reprehenderit illo excepturi inventore.</p>
+            <div class="input_field">
+                <label>Lozinka:</label>
+                <input type="text" value="mickonajjaci" required class="input">
             </div>
-            <div class="card-footer">
-                <a href="trening2.html"><button>Read More</button></a>
+            <div class="input_field">
+                <label>E-mail:</label>
+                <input type="email" value="mikimilane111@gmail.com" required class="input">
             </div>
-        </div>
-
-        <div class="cards">
-            <div class="card-img">
-                <img class="balance" src="bodybalance.jpg" alt="bodypump">
+            <div class="input_field">
+                <label>Ime:</label>
+                <input type="text" value="Miki" required class="input">
             </div>
-            <div class="card-body">
-                <h2>NoLimit Balance</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatibus laudantium, nisi
-                    praesentium reprehenderit illo excepturi inventore.</p>
+            <div class="input_field">
+                <label>Prezime:</label>
+                <input type="text" value="Topadzic" required class="input">
             </div>
-            <div class="card-footer">
-                <a href="trening3.html"><button>Read More</button></a>
+            <div class="input_field">
+                <label>Datum rodjenja:</label>
+                <input type="date" value="1988-12-23" required class="input">
+            </div>
+            <div class="input_field">
+                <label>Adresa:</label>
+                <input type="text" value="Temerinska 4" required class="input">
+            </div>
+            <div class="input_field">
+                <label>Broj telefona:</label>
+                <input type="text" value="060332445" required class="input">
+            </div>
+            <div class="input_field">
+                <a href="adminpanel.html"> <input type="submit" value="potvrdi" required class="btn"></a>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
 
 
 
@@ -226,6 +174,7 @@
 
 
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!--NAV BAR PRI SMANJENJU EKRANA-->
     <script>
@@ -266,6 +215,6 @@
             document.getElementById("myRegister").style.display = "none";
         }
     </script>
+    <!--REGISTER FORMA-->
 </body>
-
 </html>

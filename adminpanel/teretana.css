@@ -1,24 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@700&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
-    background-image: url("images/background.jpg");
-    background: linear-gradient(TO RIGHT,#656565,#fff);
+    background-color: #656565;
+    box-sizing: border-box;
 }
 
-a,
-a:hover {
-    text-decoration: none;
-}
 
-/*Pocetak CSS sa TOP BAROM i NAVOM*/
 .top-bar {
     display: flex;
     align-items: center;
@@ -115,139 +108,14 @@ nav a:hover {
     font-size: 16px;
 }
 
+.menu .home {
+    font-size: 18px;
+}
+
 .toggle {
     font-size: 30px;
     display: none;
 }
-/*KRAJ CSS SA TOP BAROM I NAVOM*/
-
-
-.site-info{
-    display: inline-block;
-    padding: 10px;
-    border: 1px solid #2D3436;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-h1{
-    display: block;
-    text-align: center;
-    font: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-.site-img{
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-.site-img img{
-    width: 300px;
-}
-.site-img :first-child{
-    height: 235px;
-}
-.site-img :nth-child(3){
-    height: 235px;
-}
-
-.title-title{
-    display: block;
-    text-align: center;
-    background-color: #040404;
-    color: #fff;
-    font-size: 30px;
-    margin-bottom: 50px;
-}
-.main-text-site{
-    padding: 5px;
-    text-align: justify;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-}
-.main-text-site h1{
-    text-align: left;
-}
-.container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.cards{
-    width: 300px;
-    margin: 10px;
-    margin-left: 35px;
-    background-color: #656565;
-    border-radius: 15px;
-}
-.card-img img{
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-}
-.attack{
-    height: 169px;
-}
-.balance{
-    height: 169px;
-}
-.card-body h2{
-    text-align: center;
-}
-.card-body p{
-    text-align: justify;
-    margin-bottom: 10px;
-    padding: 5px ;
-}
-.card-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-footer button{
-    width: 150px;
-    background: #000000;
-    color: #fff;
-    border-radius: 15px;
-    border: 2px solid black;
-    padding: 6px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.card-footer button a{
-    text-decoration: none;
-    color: #fff;
-}
-
-.card-footer  button:hover{
-    transform: scaleY(1.15);
-    transition: 0.3s;
-    background: #fff;
-    color: #000000;
-}
-
-
-.cards:hover{
-    box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
-    background-color: #222;
-    color: azure;
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: all 0.4s ease
-    
-}
-
-
-
-
-
-
-
 
 .login-popup {
     display: none;
@@ -279,7 +147,7 @@ h1{
 
 .login-container input[type=text],
 .login-container input[type=password] {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
@@ -316,9 +184,6 @@ h1{
     opacity: 1;
 }
 
-/*Kraj CSS za formu login*/
-
-/*POCETAK CSS ZA REGISTER FORMU*/
 .register-popup {
     display: none;
     position: fixed;
@@ -348,7 +213,7 @@ h1{
 
 .register-container input[type=text],
 .register-container input[type=password] {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
@@ -385,7 +250,39 @@ h1{
     opacity: 1;
 }
 
-/*KRAJ CSS ZA FORMU REGISTER*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -412,8 +309,16 @@ h1{
         right: 20px;
     }
 
-    .main-title h1 {
-        font-size: 30px;
+    h1,
+    h2 {
+        font-size: 20px;
     }
 
+    .main-text p {
+        font-size: 10px;
+    }
+
+    .main-table tr td {
+        display: block;
+    }
 }
