@@ -327,6 +327,7 @@ h2 {
     padding: 8px;
     text-align: center;
     border: 1px solid #ddd;
+    margin: 0;
 }
 
 .table .show,
@@ -386,8 +387,6 @@ h2 {
         text-align: left;
     }
 }
-
-
 
 
 

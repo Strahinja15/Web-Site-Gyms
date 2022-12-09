@@ -46,13 +46,12 @@ a:hover {
     padding-bottom: auto;
 }
 
-.top-bar a {
+.top-bar .a {
+
     color: #fff;
 }
 
-.top-bar a:hover {
-    color: #222;
-}
+
 
 
 nav {
