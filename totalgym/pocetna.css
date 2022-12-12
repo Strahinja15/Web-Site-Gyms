@@ -122,12 +122,21 @@ nav a:hover {
 /*KRAJ CSS SA TOP BAROM I NAVOM*/
 
 
-.site-info{
-    display: inline-block;
+.site-info {
+    display: block;
+    justify-content: center;
     padding: 10px;
     border: 1px solid #2D3436;
-    margin-bottom: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.site-info h2,p{
+    margin-bottom: 10px;
+}
+.site-info h2{
+    font-size: 25px;
+    font-weight: 700;
 }
 
 h1{
