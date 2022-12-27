@@ -254,7 +254,7 @@ nav a:hover {
 
 .wrapper {
     padding: 0 10px;
-    max-width: 400px;
+    max-width: 300px;
     width: 80%;
     background-color: #fff;
     margin: 20px auto;
@@ -332,7 +332,7 @@ nav a:hover {
 
 @media (max-width: 700px) {
     .wrapper {
-        width: 100%;
+        width: 70%;
     }
     .wrapper .form .input_field {
         flex-direction: column;

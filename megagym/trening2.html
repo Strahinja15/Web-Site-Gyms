@@ -160,44 +160,6 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!--NAV BAR PRI SMANJENJU EKRANA-->
-    <script>
-        $(function () {
-            $(".toggle").on("click", function () {
-                if ($(".menu").hasClass("active")) {
-                    $(".menu").removeClass("active");
-                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-                }
-                else {
-                    $(".menu").addClass("active");
-                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-                }
-            });
-        });
-    </script>
-    <!--NAV BAR PRI SMANJENJU EKRANA-->
-
-    <!--ZA FORMU LOGIN-->
-    <script>
-        function openLogin() {
-            document.getElementById("myLogin").style.display = "block";
-        }
-
-        function closeLogin() {
-            document.getElementById("myLogin").style.display = "none";
-        }
-    </script>
-    <!--LOGIN FORMA KRAJ-->
-
-    <!--REGISTER FORMA-->
-    <script>
-        function openRegister() {
-            document.getElementById("myRegister").style.display = "block";
-        }
-
-        function closeRegister() {
-            document.getElementById("myRegister").style.display = "none";
-        }
-    </script>
+<script src="../navbar_popup.js"></script>
 </body>
 </html>
