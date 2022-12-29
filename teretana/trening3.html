@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="trening1.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>www.MegaGym.com</title>
+</head>
+<body>
+    <div class="top-bar">
+        <span>
+            <ion-icon name="call-outline"></ion-icon> 021 777 4442
+        </span>
+        <ul>
+            <li><a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="../projekat.html"><img src="zyzz.jpg" alt="fitness">FITNESS-NS</a>
+        </div>
+        <div class="toggle">
+            <a href="#">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="../projekat.html">Home</a></li>
+            <li><a href="../adminpanel/adminpanel.html">Admin Panel</a></li>
+            <li><button class="open-button" onclick="openLogin()"><a href="#">Login</a></button></li>
+            <li><button class="open-buttom" onclick="openRegister()"><a href="#">Register</a></button></li>
+        </ul>
+    </nav>
+
+
+    <div class="main-text-site">
+        <h1>Total Balance</h1>
+        <h3>Zasto je Mega Balance efikasan?</h3>
+        Body Balance karakteriše naučna kombinacija jednostavnih yoga pokreta, sa elementima Tai Chi-a i Pilates-a.
+        Pokreti su pažljivo izabrani kako bi ojačali celo telo i povećali fleksibilnost, a praćeni su savršenom muzikom
+        koja vam pomaže da se opustite, tako da lako zaboravite da zapravo kroz trening izazivate svoje telo i da ga
+        menjate na bolje.
+        <br>
+        <img src="slika2.1.jpg" alt="">
+        <br>
+        <h3>Koliko kalorija sagorite radeci Mega Balance?</h3>
+        Tokom treninga fokus je na poboljšanju funkcionalne snage trupa, povećanju pokretljivosti zglobova i stvaranju
+        osećaja blagostanja i smirenosti, a ne kalorijskog sagorevanja. Stoga vam predlažemo da zaboravite na
+        sagorevanje kalorija i da prihvatite povećanu fleksibilnost, poboljšanu snagu i smanjeni stres koji donosi Body
+        Balance. <br><br>
+        <img src="slika2.2.jpg" alt="">
+        <h3>Koje vezbe izvodite tokom Mega Balance?</h3>
+        Trening počinje zagrejavanjem inspirisanim Tai Chi-em, gde vas fokus na disanje pozicionira za ono što će doći
+        krepljujući niz “pozdrava suncu“, pozicija pod nazivom Ratnik 1, 2 i 3, otvaranja kukova i naravno deo iz
+        Pilates treninga za jačanje trupa kroz vežbe koje jačaju upravo one mišiće koji daju stabilnost i potporu
+        čitavom telu, sa posebnim akcentom na duboke mišiće stabilizatore trupa (poznate kao mišići centra Core).
+        Trening se završava opuštanjem. <br>
+        <img src="slika2.3.jpg" alt="">
+        <br>
+        <h3>Da li Mega Balance zaista daje rezultate?</h3>
+        Bilo da želite da izgradite fizičku ili mentalnu snagu, Body Balance će to učiniti. U mnogim studijama je
+        pokazano da ovaj trening pomaže u smanjenju masnog tkiva, povećanju snage u leđima, poboljšanju fleksibilnosti
+        i ublažavanju anksioznosti. Body Balance takođe značajno poboljšava ravnotežu i brzinu hoda, što je odličan
+        pokazatelj povećane vitalnosti. <br>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div class="login-popup" id="myLogin">
+        <form class="login-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label><input type="checkbox" name="remember">Remember me</label>
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeLogin()">Close</button>
+        </form>
+    </div>
+
+    <div class="register-popup" id="myRegister">
+        <form class="register-container">
+            <h1>Register</h1>
+            <label for="FullName">Your name</label>
+            <input type="text" placeholder="Enter Fullname" name="name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"></label>
+            <input type="password" placeholder="Confirm Password" name="psw" required>
+            <label>Gender:</label>
+            <input type="radio" id="male" value="male" name="gender"><label for="male">Male</label>
+            <input type="radio" id="female" value="female" name="gender"><label for="female">Female</label>
+            <button type="submit" class="btn">Register</button>
+            <button type="button" class="btn cancel" onclick="closeRegister()">Close</button>
+        </form>
+    </div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="../navbar_popup.js"></script>
+</body>
+</html>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="adminpanel.css">
+    <link rel="stylesheet" href="korisnik1.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>www.FITNS/AdminPanel.com</title>
 </head>
@@ -46,9 +47,9 @@
         </ul>
     </nav>
 
-    <div class="table-container">
+    <div class="table-container" id="table_container">
         <h1 class="heading">Korisnicki Panel</h1>
-        <table class="table">
+        <table class="table" id="table">
             <thead>
                 <tr>
                     <th>Korisnik:</th>
@@ -60,8 +61,8 @@
                     <th>Radnja:</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="table_body">
+                <!--<tr>
                     <td data-label="Korisnik:">Miladin M.</td>
                     <td data-label="E-mail"><span class="email">limeni22@gmail.com</span></td>
                     <td data-label="Teretana">NoLimit</td>
@@ -90,13 +91,144 @@
                     <td data-label="Teretana">NoLimit</td>
                     <td data-label="Radnja-2"><a href="korisnik1.3.html"><button class="change">izmeni</button></a>
                         <button class="clear">obrisi</button></td>
-                </tr>
+                </tr>-->
             </tbody>
         </table>
-        <a href="adminpanel2.html" class="previous"><button class="but">sledeca</button></a>
+
+
+        <button class="but" onclick="prikaziTeretane()">sledeca</button>
+    </div>
+    <div class="container-gym" id="table_gym">
+        <h1 class="heading">Fitness Panel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Naziv:</th>
+                    <th>Adresa:</th>
+                    <th>Godina otvaranja:</th>
+                    <th>Dostupni treninzi</th>
+                    <th>Mesecna clanarina:</th>
+                    <th>Broj ocena:</th>
+                    <th>Prosecna ocena:</th>
+                    <th>Radnja</th>
+
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+               <!-- <tr id = "row">
+                    <td data-label="ID">#001</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Radnja-1"><button class="change">izmeni</button>
+                        <button class="clear">obrisi</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="ID">#002</td>
+                    <td data-label="Teretana">Total Gym</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    
+                </tr>
+                <tr>
+                    <td data-label="ID">#003</td>
+                    <td data-label="Teretana">Mega Gym</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Teretana">NoLimit</td>
+                    <td data-label="Radnja-2"><button class="change">izmeni</button>
+                        <button class="clear">obrisi</button>
+                    </td>
+                </tr>-->
+            
+            </tbody>
+        </table>
+        <button class="but" onclick="prikaziKorisnike()">prethodna</button>
     </div>
 
+    <div class="korisnik-info" id="User_popup">
+        <div class="wrapper">
+            <div class="title">
+                Korisnik Info
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>Korisnicko ime:</label>
+                    <input type="text" value="Limeni221" required class="input" id="korisnik">
+                </div>
+                <div class="input_field">
+                    <label>Puno ime:</label>
+                    <input type="email" value="limeni22@gmail.com" required class="input" id="email">
+                </div>
+                <div class="input_field">
+                    <label>Email:</label>
+                    <input type="text" value="milenkoo" required class="input" id="lozinka">
+                </div>
+                
+                <div class="input_field">
+                    <label>Adresa:</label>
+                    <input type="text" value="Milenko"  required class="input" id="ime">
+                </div>
+                <div class="input_field">
+                    <label>Datum rodjenja:</label>
+                    <input type="text" value="Milicevic" required class="input" id="prezime">
+                </div>
+                <div class="input_field">
+                    <label>Broj telefona:</label>
+                    <input type="text" value="1992-01-08" required class="input" id="datum">
+                </div>
+                
+                <div class="input_field">
+                    <button onclick="closeUser()">Sacuvaj</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="gym-info" id="gym_popup">
+        <div class="wrapper">
+            <div class="title">
+                Gym Info
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>Naziv:</label>
+                    <input type="text"  required class="input" value="" id="naziv">
+                </div>
+                <div class="input_field">
+                    <label>Adresa:</label>
+                    <input type="email"  required class="input" value="" id="adresa">
+                </div> 
+                <div class="input_field">
+                    <label>Godina otvaranja:</label>
+                    <input type="text"  required class="input" value="" id="godina_otvaranja">
+                </div>
+                <div class="input_field">
+                    <label>Dostupni treinzi:</label>
+                    <input type="text" required class="input" value="" id="treninzi">
+                </div>
+                <div class="input_field">
+                    <label>Mesecna clanarina:</label>
+                    <input type="text"  required class="input" value="" id="clanarina">
+                </div>
+                <div class="input_field">
+                    <label>Broj ocena:</label>
+                    <input type="text"  required class="input" value="" id="broj_ocena">
+                </div>
+                <div class="input_field">
+                    <label>Prosecna ocena:</label>
+                    <input type="text"  required class="input" value="" id="prosek">
+                </div>
+                <div class="input_field">
+                    <button onclick="closeGym()">Sacuvaj</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -140,7 +272,6 @@
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <label><input type="checkbox" name="remember">Remember me</label>
             <button type="submit" class="btn">Login</button>
             <button type="button" class="btn cancel" onclick="closeLogin()">Close</button>
         </form>
@@ -173,6 +304,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../navbar_popup.js"></script>
+    <script src="adminpanel.js"></script>
 </body>
 
 </html>
