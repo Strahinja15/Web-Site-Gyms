@@ -38,10 +38,10 @@
             </a>
         </div>
         <ul class="menu">
-            <li><a href="projekat.html">Home</a></li>
+            <li><a href="projekat.html">Pocetna</a></li>
             <li><a href="adminpanel/adminpanel.html">Admin Panel</a></li>
-            <li><button class="open-button" onclick="openLogin()"><a href="#">Login</a></button></li>
-            <li><button class="open-buttom" onclick="openRegister()"><a href="#">Register</a></button></li>
+            <li><button class="open-button" onclick="openLogin()"><a href="#">Prijava</a></button></li>
+            <li><button class="open-buttom" onclick="openRegister()"><a href="#">Registracija</a></button></li>
         </ul>
     </nav>
 
@@ -83,34 +83,39 @@
 
     <div class="login-popup" id="myLogin">
         <form class="login-container">
-            <h1>Login</h1>
+            <h1>Prijava</h1>
 
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
 
-            <label for="psw"><b>Password</b></label>
+            <label for="psw"><b>Sifra</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <button type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeLogin()">Close</button>
+            <button type="submit" class="btn">Uloguj se</button>
+            <button type="button" class="btn cancel" onclick="closeLogin()">Zatvori</button>
         </form>
     </div>
 
     <div class="register-popup" id="myRegister">
         <form class="register-container">
-            <h1>Register</h1>
-            <label for="FullName">Your name</label>
-            <input type="text" placeholder="Enter Fullname" name="name" required>
+            <h1>Registracija</h1>
+            <label for="name">Korisnicko ime</label>
+            <input type="text" placeholder="Unesite korisnicko ime" name="name" required>
+            <label for="name">Ime</label>
+            <input type="text" placeholder="Unesite ime" name="name" required>
+            <label for="surname">Prezime</label>
+            <input type="text" placeholder="Unesite prezime" name="name" required>
+            <label for="adress">Adresa</label>
+            <input type="text" placeholder="Unesi adresu" name="name" required>
+            <label for="date"><b>Datum rodjenja:</b></label>
+            <input type="text" placeholder="Datum rodjenja" name="name" required>
+            <label for="date"><b>broj telefona:</b></label>
+            <input type="text" placeholder="Broj telefona" name="name" required>
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <label for="psw"></label>
-            <input type="password" placeholder="Confirm Password" name="psw" required>
-            <label>Gender:</label>
-            <input type="radio" id="male" value="male" name="gender"><label for="male">Male</label>
-            <input type="radio" id="female" value="female" name="gender"><label for="female">Female</label>
-            <button type="submit" class="btn">Register</button>
-            <button type="button" class="btn cancel" onclick="closeRegister()">Close</button>
+            <input type="text" placeholder="Unesite email" name="email" required>
+            <label for="psw"><b>Sifra</b></label>
+            <input type="password" placeholder="Unesite sifru" name="psw" required>
+            <button type="submit" class="btn">Registruj se</button>
+            <button type="button" class="btn cancel" onclick="closeRegister()">Zatvori</button>
             
         </form>
     </div>
