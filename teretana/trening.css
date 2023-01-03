@@ -283,6 +283,55 @@ h3 {
 
 
 
+.main-site-info{
+    text-align: center;
+}
+
+.main-site-info h4,p{
+    margin-top: 20px;
+}
+
+.main-site-info h1{
+    font-size: 40px;
+    color: #ddd;
+    background-color: #000000;
+}
+.main-site-info h4{
+    font-size: 20px;
+}
+
+.main-site-info p{
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid #000000;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:700px) {
     nav {
         display: block;

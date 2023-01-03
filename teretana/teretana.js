@@ -12,7 +12,7 @@ function init() {
                 for (let index in fitnes_centri_kljuc) {
                     lista_teretana.push(fitnes_centri_kljuc[index])
                 }
-                
+
                 let iTeretane = document.location.search.slice("-1")
                 document.getElementById("heading").innerText = lista_teretana[iTeretane].naziv
 
@@ -35,9 +35,9 @@ function init() {
                 document.getElementById("paragraph-title").innerText = "Nesto o " + lista_teretana[iTeretane].naziv + "-u"
 
                 document.getElementById("paragraph").innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat orci non tortor elementum semper. Proin nec mauris eu ante ullamcorper hendrerit vel nec dolor. Integer non lorem sit amet lectus rutrum tempor. Phasellus consectetur, augue non pellentesque laoreet, erat leo lacinia magna, lobortis malesuada nibh dui sed tortor."
-                
+
                 document.getElementById("card-title").innerText = "Najbolji treninzi " + lista_teretana[iTeretane].naziv + " teretane ?!?"
-                
+
             }
 
         }
@@ -53,36 +53,36 @@ function init() {
 let treninzi_kljuc = {}
 
 
- function unit() {
+function unit() {
     var xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4) {
             if (xhttp.status == 200) {
-                window.addEventListener('load', unit)
+
                 treninzi_kljuc = JSON.parse(xhttp.responseText)
                 for (let i in treninzi_kljuc) {
                     lista_teretana.push(treninzi_kljuc[i])
                 }
-                let index_kljuc = document.location.search.slice("-1") 
+                let index_kljuc = document.location.search.slice("-1")
 
                 idTreninga_json = lista_teretana[index_kljuc].idTreninga //pasuje posebno svaku teretanu zasebno za sebe, ako je id 0 onda je mega gym, i ide redom
 
                 treninzi_teretane = treninzi_kljuc[idTreninga_json]
 
                 treninzi_lista = []
-                
+
                 console.log(idTreninga_json)
-                
-                for(i in treninzi_teretane){
+
+                for (i in treninzi_teretane) {
                     treninzi_lista.push(treninzi_teretane[i])
                 }
 
                 const card_container = document.getElementById("container")
                 console.log(treninzi_lista[0].kratakOpis)
-                for (index2 = 0; index2 < treninzi_lista.length; index2++){
+                for (index2 = 0; index2 < treninzi_lista.length; index2++) {
                     console.log(treninzi_lista[index2].kratakOpis)
-                    
-               
+
+
                     let cards = document.createElement("div")
                     cards.classList.add("cards")
 
@@ -105,17 +105,15 @@ let treninzi_kljuc = {}
                     let cardFooter = document.createElement("div")
                     cardFooter.classList.add("card-footer")
                     cards.appendChild(cardFooter)
-
-                    let viseInformacija = document.createElement("button")
+                    let viseInformacija = document.createElement("a")
                     viseInformacija.innerText = "Vise informacija"
-                    viseInformacija.addEventListener('click',  function (){
-
-                    window.document.location.href = "../trening.html" + idTreninga_json + "?id=" + index2})
+                    viseInformacija.setAttribute("href" , "trening.html"+ "?" + idTreninga_json + "=" + index2)
+                    
                     cardFooter.appendChild(viseInformacija)
                     console.log(cards)
                     card_container.appendChild(cards)
-                    }
-                    
+                }
+
             }
 
         }

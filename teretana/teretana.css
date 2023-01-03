@@ -229,7 +229,8 @@ h1 {
     align-items: center;
 }
 
-.card-footer button {
+.card-footer a {
+    text-align: center;
     width: 150px;
     background: #000000;
     color: #fff;
@@ -241,21 +242,18 @@ h1 {
     margin-bottom: 10px;
 }
 
-.card-footer button a {
+.card-footer a {
     color: #fff;
     text-decoration: none;
 }
 
-.card-footer button a:hover {
+.card-footer a:hover {
+    transition: 0.3s all;
+    background-color: #fff;
     color: #000000;
 }
 
-.card-footer button:hover {
-    transform: scaleY(1.15);
-    transition: 0.3s;
-    background: #fff;
-    color: #000000;
-}
+
 
 .cards:hover {
     box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
