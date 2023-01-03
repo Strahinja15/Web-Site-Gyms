@@ -63,9 +63,9 @@ let treninzi_kljuc = {}
                 for (let i in treninzi_kljuc) {
                     lista_teretana.push(treninzi_kljuc[i])
                 }
-                let iTrening = document.location.search.slice("-1") 
+                let index_kljuc = document.location.search.slice("-1") 
 
-                idTreninga_json = lista_teretana[iTrening].idTreninga //pasuje posebno svaku teretanu zasebno za sebe, ako je id 1 onda je mega gym, i ide redom
+                idTreninga_json = lista_teretana[index_kljuc].idTreninga //pasuje posebno svaku teretanu zasebno za sebe, ako je id 0 onda je mega gym, i ide redom
 
                 treninzi_teretane = treninzi_kljuc[idTreninga_json]
 
@@ -110,7 +110,7 @@ let treninzi_kljuc = {}
                     viseInformacija.innerText = "Vise informacija"
                     viseInformacija.addEventListener('click',  function (){
 
-                    window.document.location.href = "trening.html" +  idTreninga_json + "?" + index2})
+                    window.document.location.href = "../trening.html" + idTreninga_json + "?id=" + index2})
                     cardFooter.appendChild(viseInformacija)
                     console.log(cards)
                     card_container.appendChild(cards)
