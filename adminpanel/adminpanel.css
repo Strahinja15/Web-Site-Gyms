@@ -261,7 +261,8 @@ p {
     margin-top: 10px;
 
 }
-.bottom .error{
+
+.bottom .error {
     padding: 15px;
     width: 100px;
     background-color: #000000;
@@ -269,10 +270,12 @@ p {
     font-size: 15px;
     cursor: pointer;
 }
-.bottom a{
+
+.bottom a {
     text-decoration: none;
 }
-.bottom .error:hover{
+
+.bottom .error:hover {
     background-color: #222;
 }
 
@@ -347,55 +350,69 @@ h2 {
     border-radius: 5px;
 }
 
-.table .show:hover{
+.table .show:hover {
     background-color: #656565;
 }
-.table .change:hover{
+
+.table .change:hover {
     background-color: #656565;
 }
-.table .clear:hover{
+
+.table .clear:hover {
     background-color: lightcoral;
 }
-.but{
+
+.but {
     text-decoration: none;
     max-width: 100px;
     padding: 15px;
     background-color: #000000;
     color: #fff;
 }
-.but:hover{
+
+.but:hover {
     background-color: #fff;
     color: #000000;
     transition: 0.6s;
 }
-.container-gym{
+
+.container-gym {
     display: none;
 }
 
-@media (max-width:950px){
-    .heading{
+@media (max-width:950px) {
+    .heading {
         font-size: 30px;
     }
-    .table-container{
+
+    .table-container {
         margin-left: auto;
         margin-right: auto;
     }
-    .table thead{
+
+    .table thead {
         display: none;
     }
-    .table,.table tbody,.table tr,.table td{
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
         display: block;
         width: 100%;
     }
-    .table tr{
+
+    .table tr {
         margin-bottom: 15px;
     }
-    .table tbody tr td{
+
+    .table tbody tr td {
         text-align: right;
         padding-left: 50%;
         position: relative;
     }
-    .table td:before{
+
+    .table td:before {
         content: attr(data-label);
         position: absolute;
         left: 0;
@@ -405,7 +422,8 @@ h2 {
         font-size: 14px;
         text-align: left;
     }
-    .email{
+
+    .email {
         font-size: 12px;
     }
 }

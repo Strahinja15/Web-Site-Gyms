@@ -65,7 +65,7 @@ function unit() {
                 }
                 let index_kljuc = document.location.search.slice("-1")
 
-                idTreninga_json = lista_teretana[index_kljuc].idTreninga //pasuje posebno svaku teretanu zasebno za sebe, ako je id 0 onda je mega gym, i ide redom
+                idTreninga_json = lista_teretana[index_kljuc].idTreninga //pasuje posebno  za svaku teretanu njene treninge zasebno za sebe
 
                 treninzi_teretane = treninzi_kljuc[idTreninga_json]
 
@@ -107,8 +107,8 @@ function unit() {
                     cards.appendChild(cardFooter)
                     let viseInformacija = document.createElement("a")
                     viseInformacija.innerText = "Vise informacija"
-                    viseInformacija.setAttribute("href" , "trening.html"+ "?" + idTreninga_json + "=" + index2)
-                    
+                    viseInformacija.setAttribute("href", "trening.html" + "?" + idTreninga_json + "=" + index2)
+
                     cardFooter.appendChild(viseInformacija)
                     console.log(cards)
                     card_container.appendChild(cards)

@@ -41,7 +41,7 @@ function init() {
                     let adresa = document.createElement("p");
                     adresa.innerText = "Adresa: " + lista_teretana[i].adresa
                     card_description.appendChild(adresa)
-                    
+
                     let mesecnaClanarina = document.createElement("p");
                     mesecnaClanarina.innerText = "Mesecna clanarina: " + lista_teretana[i].mesecnaClanarina
                     card_description.appendChild(mesecnaClanarina)
@@ -49,9 +49,10 @@ function init() {
                     let dugme = document.createElement("a");
                     dugme.classList.add("link");
                     dugme.innerHTML = "citaj vise"
-                    dugme.addEventListener('click',  function (){
+                    dugme.addEventListener('click', function () {
 
-                        window.document.location.href = "teretana/teretana.html" + "?id=" +i})
+                        window.document.location.href = "teretana/teretana.html" + "?id=" + i
+                    })
                     card_description.appendChild(dugme)
                     card.appendChild(card_description)
                     container.appendChild(card)

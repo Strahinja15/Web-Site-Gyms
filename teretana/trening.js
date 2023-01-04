@@ -15,17 +15,17 @@ function it(string_od_treninga) {
                 console.log(lista_treniga)
                 let location = document.location.search
                 let treningID = location.slice(-1)
-                let treninziID = location.slice(1,-2)
-    
+                let treninziID = location.slice(1, -2)
+
                 let treninzi = trening_kljuc[treninziID]
                 lista = []
-                for(k in treninzi){
+                for (k in treninzi) {
                     lista.push(treninzi[k])
                 }
 
                 let trening = lista[treningID]
-                
-                
+
+
                 document.getElementById("title").innerText = "- " + trening.naziv + " -"
                 document.getElementById("capacity").innerText = "Broj osoba: " + trening.maxOsobe
                 document.getElementById("time").innerText = "Vreme trajanja treniga: " + trening.trajanje
