@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: #656565;
+}
+
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background-color: #000000;
+
+
+}
+
+.top-bar span {
+    color: #fff;
+}
+
+.top-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-bar li {
+    margin: 0px 5px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.top-bar a {
+    color: #fff;
+}
+
+.top-bar a:hover {
+    color: #222;
+}
+
+
+nav {
+    background: linear-gradient(TO RIGHT, #040404, #000000, #656565);
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px gray;
+
+
+
+
+}
+
+nav a {
+    color: #fff;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: gray;
+}
+
+.logo img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li {
+    padding: 15px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.menu .home {
+    font-size: 18px;
+}
+
+.toggle {
+    font-size: 30px;
+    display: none;
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #222;
+    z-index: 9;
+}
+
+.login-popup {
+    color: #fff;
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    padding: 10px;
+    background: linear-gradient(#000000, #2D3436);
+    border: 4px solid #2D3436;
+}
+
+
+.login-container input[type=text],
+.login-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+.login-container input[type=text]:focus,
+.login-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+.login-container .btn {
+    background: linear-gradient(TO RIGHT, #04619F, #000000);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+
+.login-container .cancel {
+    background: linear-gradient(TO RIGHT, #B82E1F, #000000);
+}
+
+
+.login-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+.register-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #222;
+    z-index: 9;
+}
+
+.register-popup {
+    color: #fff;
+}
+
+.register-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+    padding: 10px;
+    background: linear-gradient(#000000, #2D3436);
+    border: 4px solid #2D3436;
+}
+
+.register-container input[type=text],
+.register-container input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+.register-container input[type=text]:focus,
+.register-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+.register-container .btn {
+    background: linear-gradient(TO RIGHT, #04619F, #000000);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+
+.register-container .cancel {
+    background: linear-gradient(TO RIGHT, #B82E1F, #000000);
+}
+
+
+.register-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+.gym-info{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #222;
+    z-index: 9;
+}
+.korisnik-info{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: 4px solid #222;
+    z-index: 9;
+
+}
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 0 10px;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+
+.wrapper .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2D3436;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form {
+    width: 100%;
+}
+
+.wrapper .form .input_field {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .input_field label {
+    width: 200px;
+    color: #040404#757575;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.wrapper .form .input_field .input {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .form .input_field .input:focus {
+    border: 1px solid #000000;
+}
+
+.wrapper .form .input_field button, .btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    background: #000000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.wrapper .form .input_field a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.wrapper .form .input_field:last-child {
+    margin-bottom: 0px;
+}
+
+.wrapper .form .input_field .btn:hover {
+    transform: scaleX(1.05);
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .wrapper .form .input_field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wrapper .form .input_field label {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    nav {
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }
+
+    .menu {
+        margin-top: 15px;
+        display: none;
+    }
+
+    .menu.active,
+    .toggle {
+        display: block;
+    }
+
+    .toggle {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    h1,
+    h2 {
+        font-size: 20px;
+    }
+
+    .main-text p {
+        font-size: 10px;
+    }
+
+    .main-table tr td {
+        display: block;
+    }
+}

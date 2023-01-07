@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminpanel.css">
+    <link rel="stylesheet" href="../css/korisnik1.css">
+    <link rel="stylesheet" href="../css/teretana1.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>www.FITNS/AdminPanel.com</title>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <span>
+            <ion-icon name="call-outline"></ion-icon> 021 777 4442
+        </span>
+        <ul>
+            <li><a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li><a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <a href="projekat.html"><img src="../images/zyzz.jpg" alt="fitness">FITNESS-NS</a>
+        </div>
+        <div class="toggle">
+            <a href="#">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+        </div>
+        <ul class="menu">
+            <li class="home"><a href="projekat.html">Pocetna</a></li>
+            <li class="home"><a href="adminpanel.html">Admin Panel</a></li>
+            <li><button class="open-button" onclick="openLogin()"><a href="#">Prijava</a></button></li>
+            <li><button class="open-buttom" onclick="openRegister()"><a href="#">Registracija</a></button></li>
+        </ul>
+    </nav>
+
+    <div class="table-container" id="table_container">
+        <h1 class="heading">Korisnicki Panel</h1>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>Korisnik:</th>
+                    <th>Ime:</th>
+                    <th>Prezime</th>
+                    <th>E-mail:</th>
+                    <th>Adresa:</th>
+                    <th>Datum Rodjenja:</th>
+                    <th>Broj Telefona:</th>
+                    <th>Radnja:</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+
+            </tbody>
+        </table>
+
+
+        <button class="but" onclick="prikaziTeretane()">sledeca</button>
+    </div>
+    <div class="container-gym" id="table_gym">
+        <h1 class="heading">Fitness Panel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Naziv:</th>
+                    <th>Adresa:</th>
+                    <th>Godina otvaranja:</th>
+                    <th>Dostupni treninzi</th>
+                    <th>Mesecna clanarina:</th>
+                    <th>Broj ocena:</th>
+                    <th>Prosecna ocena:</th>
+                    <th>Radnja</th>
+
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+
+
+            </tbody>
+        </table>
+        <button class="but" onclick="prikaziKorisnike()">prethodna</button>
+    </div>
+
+    <div class="korisnik-info" id="User_popup">
+        <div class="wrapper">
+            <div class="title">
+                Korisnik Info
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>Korisnicko ime:</label>
+                    <input type="text"   class="input" id="korisnikk">
+                </div>
+                <div class="input_field">
+                    <label>Ime:</label>
+                    <input type="email"   class="input" id="imee">
+                </div>
+                <div class="input_field">
+                    <label>Prezime:</label>
+                    <input type="email"   class="input" id="prezimee">
+                </div>
+                <div class="input_field">
+                    <label>Email:</label>
+                    <input type="text"   class="input" id="emaill">
+                </div>
+
+                <div class="input_field">
+                    <label>Adresa:</label>
+                    <input type="text"   class="input" id="adresaa">
+                </div>
+                <div class="input_field">
+                    <label>Datum rodjenja:</label>
+                    <input type="text"   class="input" id="datumm">
+                </div>
+                <div class="input_field">
+                    <label>Broj telefona:</label>
+                    <input type="text"   class="input" id="brojj">
+                </div>
+
+                <div class="input_field">
+                    <button type="submit" onclick="closeUser()">Sacuvaj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gym-info" id="gym_popup">
+        <div class="wrapper">
+            <div class="title">
+                Gym Info
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>Naziv:</label>
+                    <input type="text"  class="input"  id="naziv">
+                </div>
+                <div class="input_field">
+                    <label>Adresa:</label>
+                    <input type="email"  class="input"  id="teretana_adresa">
+                </div>
+                <div class="input_field">
+                    <label>Godina otvaranja:</label>
+                    <input type="text"  class="input"  id="godina_otvaranja">
+                </div>
+                <div class="input_field">
+                    <label>Dostupni treinzi:</label>
+                    <input type="text"  class="input"  id="treninzi">
+                </div>
+                <div class="input_field">
+                    <label>Mesecna clanarina:</label>
+                    <input type="text"  class="input"  id="clanarina">
+                </div>
+                <div class="input_field">
+                    <label>Broj ocena:</label>
+                    <input type="text"  class="input"  id="broj_ocena">
+                </div>
+                <div class="input_field">
+                    <label>Prosecna ocena:</label>
+                    <input type="text"  class="input"  id="prosek">
+                </div>
+                <div class="input_field">
+                    <button type="submit" onclick="closeGym()">Sacuvaj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login-popup" id="myLogin">
+        <form class="login-container">
+            <h1>Prijava</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email"  >
+
+            <label for="psw"><b>Sifra</b></label>
+            <input type="password" placeholder="Enter Password"  >
+            <button type="submit" class="btn">Uloguj se</button>
+            <button type="button" class="btn cancel" onclick="closeLogin()">Zatvori</button>
+        </form>
+    </div>
+
+    <div class="register-popup" id="myRegister">
+        <div class="register-container" id="registrationForm">
+            <h1>Registracija</h1>
+            <div>
+                <label for="name">Korisnicko ime</label>
+                <input type="text" placeholder="Unesite korisnicko ime" name="korisnik" id="korisnik">
+            </div>
+            <div>
+                <label for="name">Ime</label>
+                <input type="text" placeholder="Unesite ime" name="ime" id="ime">
+            </div>
+            <div>
+                <label for="surname">Prezime</label>
+                <input type="text" placeholder="Unesite prezime" name="prezime" id="prezime">
+            </div>
+            <div>
+                <label for="adress">Adresa</label>
+                <input type="text" placeholder="Unesi adresu" name="adresa" id="adresa">
+            </div>
+            <div>
+                <label for="date"><b>Datum rodjenja:</b></label>
+                <input type="date" placeholder="Datum rodjenja" name="datum" id="datum">
+            </div>
+            <div>
+                <label for="date"><b>broj telefona:</b></label>
+                <input type="text" placeholder="Broj telefona" name="broj" id="broj">
+            </div>
+            <div>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Unesite email" name="email" id="email">
+            </div>
+            <div>
+                <label for="psw"><b>Lozinka</b></label>
+                <input type="password" placeholder="Unesite lozinku" name="lozinka" id="lozinka">
+            </div>
+            <div>
+                <label for="psw"><b>Ponovi lozinku</b></label>
+                <input type="password" placeholder="ponovi lozinku" name="ponovilozinku" id="ponovilozinku">
+            </div>
+            <button onclick="registracija()" class="btn">Registruj se</button>
+            <button type="button" class="btn cancel" onclick="closeRegister()">Zatvori</button>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../js/navbar_popup.js"></script>
+    <script src="../js/adminpanel.js"></script>
+    <script src="../js/validacija.js"></script>
+</body>
+
+</html>
