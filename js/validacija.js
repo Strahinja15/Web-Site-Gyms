@@ -54,7 +54,7 @@ inputs.forEach(element =>{
                 
                 case 'prezime' :
                     if(!validatePrezime(inputValue)){
-                        errors[inputName].push("Prezime moze da sadrzi samo slova")
+                        errors[inputName].push("Prezime moze sadrzati samo slova")
                     }
                 break;
 
