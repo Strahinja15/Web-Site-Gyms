@@ -263,6 +263,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .stars a{
     opacity: 50%;
@@ -520,5 +521,8 @@ h2{
 
     .site-img img {
         width: 230px;
+    }
+    .stars a{
+        font-size: 1.5rem;
     }
 }

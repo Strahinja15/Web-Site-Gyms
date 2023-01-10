@@ -1,5 +1,5 @@
 const starWrapper = document.querySelector(".stars");
-const stars = document.querySelectorAll(".stars a");
+const stars = document.querySelectorAll(".stars .star");
 
 stars.forEach((star, clickedIdx) => {
 
