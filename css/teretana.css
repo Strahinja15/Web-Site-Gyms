@@ -252,6 +252,41 @@ h1 {
     background-color: #fff;
     color: #000000;
 }
+hr{
+    background-color: #000000;
+}
+h2{
+    margin-top: 15px;
+    text-align: center;
+}
+.stars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stars a{
+    opacity: 50%;
+    font-size: 3rem;
+    padding: 3px;
+    cursor: pointer;
+}
+.stars:hover a{
+    opacity: 100%;
+}
+
+.stars a:hover{
+    opacity: 100%;
+}
+.stars a:hover ~ a{
+    opacity: 50%;
+}
+.stars a.active{
+    opacity: 100%;
+}
+.stars.disabled{
+    pointer-events: none;
+}
+
 
 
 
