@@ -18,6 +18,7 @@ xhr.send(korisnik_json);
 xhr.onload = function(){
     if (xhr.status == 200){
         window.location.reload()
+        console.log(korisnik_info)
         //Zahtev je poslat. odgovor mozete napisati ovde
     }
     //desila se greska, mozete je ispisati ovde
