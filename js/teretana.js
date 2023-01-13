@@ -137,13 +137,13 @@ stars.forEach((star, clickedIdx) => {
                 otherStar.classList.add("active");
             }
         });
-        rating = clickedIdx + 1
-        let lista_rating = lista_teretana.ocene
-        lista_rating.push(rating)
-        console.log(ocene)
-
+        let rating = clickedIdx + 1
+        const lista_rating = lista_teretana.ocene
+        lista_rating.push(rating);
     });
 })
+
+
 
 window.addEventListener('load', init)
 window.addEventListener('load', unit)

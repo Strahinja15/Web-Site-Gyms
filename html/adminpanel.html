@@ -104,36 +104,36 @@
             <div class="form">
                 <div class="input_field">
                     <label>Korisnicko ime:</label>
-                    <input type="text"   class="input" id="korisnikk">
+                    <input type="text"   class="input" id="korisnikk" name="korisnik_">
                 </div>
                 <div class="input_field">
                     <label>Ime:</label>
-                    <input type="email"   class="input" id="imee">
+                    <input type="email"   class="input" id="imee" name="korisnik_ime">
                 </div>
                 <div class="input_field">
                     <label>Prezime:</label>
-                    <input type="email"   class="input" id="prezimee">
+                    <input type="email"   class="input" id="prezimee" name="korisnik_prezime">
                 </div>
                 <div class="input_field">
                     <label>Email:</label>
-                    <input type="text"   class="input" id="emaill">
+                    <input type="text"   class="input" id="emaill" name="korisnik_email">
                 </div>
 
                 <div class="input_field">
                     <label>Adresa:</label>
-                    <input type="text"   class="input" id="adresaa">
+                    <input type="text"   class="input" id="adresaa" name="korisnik_adresa">
                 </div>
                 <div class="input_field">
                     <label>Datum rodjenja:</label>
-                    <input type="text"   class="input" id="datumm">
+                    <input type="text"   class="input" id="datumm" name="korisnik_datum">
                 </div>
                 <div class="input_field">
                     <label>Broj telefona:</label>
-                    <input type="text"   class="input" id="brojj">
+                    <input type="text"   class="input" id="brojj" name="korisnik_broj">
                 </div>
 
                 <div class="input_field">
-                    <button type="submit" onclick="closeUser()">Sacuvaj</button>
+                    <button onclick="izmeniKorisnika()">Sacuvaj</button>
                 </div>
             </div>
         </div>
@@ -249,6 +249,7 @@
     <script src="../js/navbar_popup.js"></script>
     <script src="../js/adminpanel.js"></script>
     <script src="../js/validacija.js"></script>
+    <script src="../js/validacijaIzmene.js"></script>
 </body>
 
 </html>

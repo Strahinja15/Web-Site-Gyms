@@ -460,6 +460,24 @@ h2{
     background-color: #ddd;
     outline: none;
 }
+.button-star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-star button{
+    padding: 15px;
+    background-color: #000000;
+    border-radius: 5px;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.button-star button:hover{
+    background-color: #f1f1f1;
+    color: #000000;
+    transition: all 0.3s;
+}
 
 
 .register-container .btn {

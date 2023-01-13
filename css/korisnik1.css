@@ -249,7 +249,7 @@ nav a:hover {
     opacity: 1;
 }
 
-.gym-info{
+.gym-info {
     display: none;
     position: fixed;
     top: 0;
@@ -260,7 +260,8 @@ nav a:hover {
     border: 4px solid #222;
     z-index: 9;
 }
-.korisnik-info{
+
+.korisnik-info {
     display: none;
     position: fixed;
     top: 0;
@@ -272,12 +273,13 @@ nav a:hover {
     z-index: 9;
 
 }
+
 .wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     padding: 0 10px;
     max-width: 400px;
     width: 100%;
@@ -302,8 +304,18 @@ nav a:hover {
 
 .wrapper .form .input_field {
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+    
+
+}
+
+.wrapper .form li {
+    background-color: white;
+    background: white;
+    border: none;
+    list-style: none;
+    color: #B82E1F;
+    font-size: 12px;
+
 }
 
 .wrapper .form .input_field label {
@@ -314,6 +326,7 @@ nav a:hover {
 }
 
 .wrapper .form .input_field .input {
+    display: block;
     width: 100%;
     outline: none;
     border: 1px solid #d5dbd9;
@@ -327,7 +340,8 @@ nav a:hover {
     border: 1px solid #000000;
 }
 
-.wrapper .form .input_field button, .btn {
+.wrapper .form .input_field button,
+.btn {
     width: 100%;
     padding: 8px 10px;
     font-size: 14px;

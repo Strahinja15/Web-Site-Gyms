@@ -37,6 +37,7 @@ let errors = {
     "lozinka" : [],
     "ponovilozinku" : []
 }
+console.log(inputs)
 inputs.forEach(element =>{
     element.addEventListener('keyup',e =>{
         let currentInput = e.target;

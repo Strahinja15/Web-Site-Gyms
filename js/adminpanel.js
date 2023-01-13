@@ -1,7 +1,8 @@
 var firebaseUrl = 'https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app';
 var fitnes_centri_kljuc = {}
 var lista_korisnika = []
-
+let st = []
+let izmenakorisnika = 0
 function init() {
     var xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function () {
@@ -12,6 +13,8 @@ function init() {
                 for (let index in fitnes_centri_kljuc) {
                     lista_korisnika.push(fitnes_centri_kljuc[index])
                 }
+                const lista_IDS = Object.keys(fitnes_centri_kljuc)
+
                 const t_bodies = document.getElementById("table_body")
                 for (let i = 0; i < lista_korisnika.length; i++) {
 
@@ -70,6 +73,7 @@ function init() {
                         document.getElementById("adresaa").value = elementi[4].innerText
                         document.getElementById("datumm").value = elementi[5].innerText
                         document.getElementById("brojj").value = elementi[6].innerText
+                        izmenakorisnika = i
                     }
 
                     izmeni.setAttribute("data-label", "Radnja:")
@@ -78,23 +82,42 @@ function init() {
                     let obrisi = document.createElement("button")
                     obrisi.classList.add("clear")
                     obrisi.innerText = "Obrisi"
+
+                    obrisi.onclick = function () {
+                        brisanje = confirm("Da li ste sigurni da zelite da obrisete korisnika?")
+                        if(brisanje){
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("DELETE", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/korisnici/" + lista_IDS[i] + ".json");
+                        xhr.send();
+                        xhr.onload = function () {
+                            if (xhr.status == 200) {
+                                window.location.reload()
+                                //Zahtev je poslat. odgovor mozete napisati ovde
+                            }
+                            //desila se greska, mozete je ispisati ovde
+                        }
+                    }
+                }
+
+
+                    dugme.appendChild(obrisi)
+
+                    tr.appendChild(dugme)
+                    t_bodies.appendChild(tr)
+
+
+
+
+                }
                 
-                dugme.appendChild(obrisi)
-
-                tr.appendChild(dugme)
-                t_bodies.appendChild(tr)
-
-
-
 
             }
 
         }
-
+        
     }
-}
-xhttp.open('GET', firebaseUrl + '/korisnici.json')
-xhttp.send()
+    xhttp.open('GET', firebaseUrl + '/korisnici.json')
+    xhttp.send()
 }
 
 var fitnes_centri_kljuc1 = {}
@@ -109,10 +132,10 @@ function onit() {
                 for (let index in fitnes_centri_kljuc1) {
                     lista_teretana.push(fitnes_centri_kljuc1[index])
                 }
-
+                const lista_IDS1 = Object.keys(fitnes_centri_kljuc1)
                 const t_gym = document.getElementById("table-body")
                 for (let i = 0; i < lista_teretana.length; i++) {
-                    console.log(lista_teretana[i])
+                    //console.log(lista_teretana[i])
 
                     let tr = document.createElement("tr")
                     tr.id = "row" + i
@@ -178,6 +201,20 @@ function onit() {
 
                     obrisi.setAttribute("data-label", "Radnja:")
                     dugme.appendChild(obrisi)
+                    obrisi.onclick = function () {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("DELETE", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/korisnici/" + lista_IDS1[i] + ".json");
+                        xhr.send();
+                        xhr.onload = function () {
+                            if (xhr.status == 200) {
+                                window.location.reload()
+                                //Zahtev je poslat. odgovor mozete napisati ovde
+                            }
+                            //desila se greska, mozete je ispisati ovde
+                        }
+                    }
+
+
                     tr.appendChild(dugme)
 
 
@@ -210,6 +247,37 @@ function closeUser() {
 function closeGym() {
     document.getElementById("gym_popup").style.display = "none";
 }
+function izmeniKorisnika() {
+    console.log()
+    let izmena_korisnik = {
+        "korisnickoIme": document.getElementById("korisnikk").value,
+        "ime": document.getElementById("imee").value,
+        "prezime": document.getElementById("prezimee").value,
+        "email": document.getElementById("emaill").value,
+        "adresa": document.getElementById("adresaa").value,
+        "datumRodjenja": document.getElementById("datumm").value,
+        "telefon": document.getElementById("brojj").value,
+    }
+    
+    rezultat = confirm("Da li ste sigurni da zelite da napravite izmene?")
+    if(rezultat){
+        const korisnik_IDS = Object.keys(fitnes_centri_kljuc)
+        var xhr = new XMLHttpRequest();
+        xhr.open("PATCH", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/korisnici/" + korisnik_IDS[izmenakorisnika] + ".json");
+        xhr.setRequestHeader("Content-type", "application/json");
+        var posalji = JSON.stringify(izmena_korisnik);
+        xhr.send(posalji);
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                window.location.reload()
+                //Zahtev je poslat. odgovor mozete napisati ovde
+            }
+            //desila se greska, mozete je ispisati ovde
+        }
+    }
+}
+
+
 
 
 window.addEventListener('load', init)
