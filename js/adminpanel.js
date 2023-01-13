@@ -85,19 +85,19 @@ function init() {
 
                     obrisi.onclick = function () {
                         brisanje = confirm("Da li ste sigurni da zelite da obrisete korisnika?")
-                        if(brisanje){
-                        var xhr = new XMLHttpRequest();
-                        xhr.open("DELETE", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/korisnici/" + lista_IDS[i] + ".json");
-                        xhr.send();
-                        xhr.onload = function () {
-                            if (xhr.status == 200) {
-                                window.location.reload()
-                                //Zahtev je poslat. odgovor mozete napisati ovde
+                        if (brisanje) {
+                            var xhr = new XMLHttpRequest();
+                            xhr.open("DELETE", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/korisnici/" + lista_IDS[i] + ".json");
+                            xhr.send();
+                            xhr.onload = function () {
+                                if (xhr.status == 200) {
+                                    window.location.reload()
+                                    //Zahtev je poslat. odgovor mozete napisati ovde
+                                }
+                                //desila se greska, mozete je ispisati ovde
                             }
-                            //desila se greska, mozete je ispisati ovde
                         }
                     }
-                }
 
 
                     dugme.appendChild(obrisi)
@@ -109,12 +109,12 @@ function init() {
 
 
                 }
-                
+
 
             }
 
         }
-        
+
     }
     xhttp.open('GET', firebaseUrl + '/korisnici.json')
     xhttp.send()
@@ -258,9 +258,10 @@ function izmeniKorisnika() {
         "datumRodjenja": document.getElementById("datumm").value,
         "telefon": document.getElementById("brojj").value,
     }
-    
+
     rezultat = confirm("Da li ste sigurni da zelite da napravite izmene?")
-    if(rezultat){
+    if (rezultat) {
+
         const korisnik_IDS = Object.keys(fitnes_centri_kljuc)
         var xhr = new XMLHttpRequest();
         xhr.open("PATCH", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/korisnici/" + korisnik_IDS[izmenakorisnika] + ".json");
@@ -274,8 +275,11 @@ function izmeniKorisnika() {
             }
             //desila se greska, mozete je ispisati ovde
         }
+
+
     }
 }
+
 
 
 
