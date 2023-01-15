@@ -24,7 +24,7 @@ function init() {
                 ocene = teretana_i.ocene;
                 console.log(teretana_i)
                 console.log(ocene)
-                
+
                 document.getElementById("heading").innerText = teretana_i.naziv
 
                 document.getElementById("head-info").innerText = "Kako izgleda " + teretana_i.naziv + "?"
@@ -78,7 +78,7 @@ function unit() {
 
                 treninzi_lista = []
 
-                
+
 
                 for (i in treninzi_teretane) {
                     treninzi_lista.push(treninzi_teretane[i])
@@ -87,7 +87,7 @@ function unit() {
                 const card_container = document.getElementById("container")
                 console.log(treninzi_lista[0].kratakOpis)
                 for (index2 = 0; index2 < treninzi_lista.length; index2++) {
-                    
+
 
 
                     let cards = document.createElement("div")
@@ -117,7 +117,7 @@ function unit() {
                     viseInformacija.setAttribute("href", "trening.html" + "?" + idTreninga_json + "=" + index2)
 
                     cardFooter.appendChild(viseInformacija)
-                    
+
                     card_container.appendChild(cards)
                 }
 
@@ -181,14 +181,11 @@ function ocenjivanjeTeretane() {
         xhr.setRequestHeader("Content-type", "application/json");
         var ocena_json = JSON.stringify(rezultat);
         xhr.send(ocena_json);
-        let dugmence = document.getElementById("button-star")
         
-        dugmence.classList.add("disabled");
-
-        
-
     }
 }
+
+
 
 
 
