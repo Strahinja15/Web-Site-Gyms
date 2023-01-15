@@ -261,6 +261,7 @@ function izmeniKorisnika() {
 
     rezultat = confirm("Da li ste sigurni da zelite da napravite izmene?")
     if (rezultat) {
+        
 
         const korisnik_IDS = Object.keys(fitnes_centri_kljuc)
         var xhr = new XMLHttpRequest();
@@ -276,9 +277,9 @@ function izmeniKorisnika() {
             //desila se greska, mozete je ispisati ovde
         }
 
-
     }
-}
+        
+    }
 
 
 

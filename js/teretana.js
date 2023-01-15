@@ -2,7 +2,9 @@ var firebaseUrl = 'https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabas
 var fitnes_centri_kljuc = {}
 var lista_teretana = []
 var ocene = [];
-
+var lista_indexa = []
+var ocenjivanje_teretane;
+let test;
 function init() {
     var xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function () {
@@ -15,9 +17,14 @@ function init() {
                 }
 
                 let iTeretane = document.location.search.slice("-1")
+                test = iTeretane
                 teretana_i = lista_teretana[iTeretane]
+                ocenjivanje_teretane = teretana_i
+                lista_indexa = Object.keys(fitnes_centri_kljuc)
                 ocene = teretana_i.ocene;
-                console.log(ocene);
+                console.log(teretana_i)
+                console.log(ocene)
+                
                 document.getElementById("heading").innerText = teretana_i.naziv
 
                 document.getElementById("head-info").innerText = "Kako izgleda " + teretana_i.naziv + "?"
@@ -71,7 +78,7 @@ function unit() {
 
                 treninzi_lista = []
 
-                console.log(idTreninga_json)
+                
 
                 for (i in treninzi_teretane) {
                     treninzi_lista.push(treninzi_teretane[i])
@@ -80,7 +87,7 @@ function unit() {
                 const card_container = document.getElementById("container")
                 console.log(treninzi_lista[0].kratakOpis)
                 for (index2 = 0; index2 < treninzi_lista.length; index2++) {
-                    console.log(treninzi_lista[index2].kratakOpis)
+                    
 
 
                     let cards = document.createElement("div")
@@ -110,7 +117,7 @@ function unit() {
                     viseInformacija.setAttribute("href", "trening.html" + "?" + idTreninga_json + "=" + index2)
 
                     cardFooter.appendChild(viseInformacija)
-                    console.log(cards)
+                    
                     card_container.appendChild(cards)
                 }
 
@@ -124,6 +131,7 @@ function unit() {
 const starIndex = document.querySelector(".stars");
 const stars = document.querySelectorAll(".stars .star");
 
+let ocena = 0
 stars.forEach((star, clickedIdx) => {
 
     star.addEventListener("click", () => {
@@ -135,13 +143,53 @@ stars.forEach((star, clickedIdx) => {
             if (otherIdx <= clickedIdx) {
 
                 otherStar.classList.add("active");
+                ocena = clickedIdx + 1
+
             }
         });
-        let rating = clickedIdx + 1
-        const lista_rating = lista_teretana.ocene
-        lista_rating.push(rating);
+
     });
 })
+
+
+
+
+function ocenjivanjeTeretane() {
+    ocene.push(ocena)
+    console.log(ocene)
+    if (ocena != 0) { //ako ocena nije 0 onda radi
+
+        function roundToTwo(num) { //pomocna funckija da zaokruzi broj na 2 decimale
+            return +(Math.round(num + "e+2") + "e-2");
+        }
+        function calculateSum(array) { // pomocna funckija da nadje sumu niza
+            return array.reduce((amburator, vrednos) => {
+                return amburator + vrednos;
+            }, 0);
+        }
+
+        document.getElementById("p4").innerHTML = "<b>Broj ocena:</b> " + ocene.length
+        document.getElementById("p3").innerHTML = "<b>Prosecna ocena:</b> " + roundToTwo(calculateSum(ocene) / ocene.length)
+
+
+        let rezultat = {
+            "ocene": ocene,
+            "prosecnaOcena": roundToTwo(calculateSum(ocene) / ocene.length)
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open("PATCH", "https://wd-sr4-2022-default-rtdb.europe-west1.firebasedatabase.app/fitnesCentri/" + lista_indexa[test] + ".json");
+        xhr.setRequestHeader("Content-type", "application/json");
+        var ocena_json = JSON.stringify(rezultat);
+        xhr.send(ocena_json);
+        let dugmence = document.getElementById("button-star")
+        
+        dugmence.classList.add("disabled");
+
+        
+
+    }
+}
+
 
 
 
