@@ -82,6 +82,8 @@ inputs.forEach(element => {
             }
 
 
+        }else{
+            errors[inputName] = ["Polje mora sadrzati minimalno 5 karaktera"]
         }
 
         populateErrors();

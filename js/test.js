@@ -1,4 +1,4 @@
-let inputChange = document.querySelectorAll('inputChange');
+let inputChange = document.querySelectorAll('input');
 let korisnik_errors = {
     "korisnik_": [],
     "korisnik_ime": [],
@@ -11,9 +11,9 @@ let korisnik_errors = {
 console.log(inputChange)
 inputChange.forEach(element => {
     element.addEventListener('keyup', e => {
-        let changeinput = e.target;
-        let changeValue = changeinput.value;
-        let changeName = changeinput.getAttribute('name');
+        let changeInput = e.target;
+        let changeValue = changeInput.value;
+        let changeName = changeInput.getAttribute('name');
 
         if (changeValue.length > 4) {
             korisnik_errors[changeName] = []
@@ -44,9 +44,9 @@ inputChange.forEach(element => {
                     break;
                     
                 case 'ponovilozinku':
-                    let lozinka = document.querySelector('inputChange[name="lozinka"]').value;
-                    if (inputChangeValue != lozinka) {
-                        errors[inputChangeName].push("Lozinke moraju da se poklapaju");
+                    let lozinka = document.querySelector('input[name="lozinka"]').value;
+                    if (inputValue != lozinka) {
+                        errors[inputName].push("Lozinke moraju da se poklapaju");
                     }
                     break;
 
@@ -66,18 +66,18 @@ inputChange.forEach(element => {
 })
 const IzmeniKorisnika = () => {
 
-    for (let elem of document.querySelectorAll('ul.change')) {
+    for (let elem of document.querySelectorAll('ul.validation')) {
         elem.remove();
     }
 
     for (let key of Object.keys(korisnik_errors)) {
-        let inputChange = document.querySelector(`inputChange[name="${key}"]`)
-        let parentChangeElement = inputChange.parentChangeElement;
+        let input = document.querySelector(`input[name="${key}"]`)
+        let parentElement = input.parentElement;
         let korisnik_errorsElement = document.createElement("ul");
-        korisnik_errorsElement.classList.add("change");
-        parentChangeElement.appendChild(korisnik_errorsElement);
+        korisnik_errorsElement.classList.add("validation");
+        parentElement.appendChild(korisnik_errorsElement);
 
-        console.log(parentChangeElement)
+        console.log(parentElement)
         korisnik_errors[key].forEach(error => {
             let li = document.createElement("li");
             li.innerText = error;
